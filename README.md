@@ -1,11 +1,13 @@
 # fake-address-generator
-You can generate fake or real random address from fakeaddressgenerator.com. 
+You can generate fake or real random address from [fakeaddressgenerator.com](https://fakeaddressgenerator.com).<br/>
 With this module, you can access informations programically.
 
 # Disclaimer
 * Please only use this module for legal and educational purposes.
 
-# Example Code
+# Using
+You just need to run `npm i fake-address-generator`.<br/>
+After adding, you just need to add this line to your project `const fakeAddress = require("fake-address-generator");`.<br/>
 You can find example code in [Tests Folder](https://github.com/muratulashozturk/fake-address-generator/blob/main/tests/)
 
 # Support The Project
