@@ -1,5 +1,5 @@
 # fake-address-generator
-You can generate fake or real random address from fakeaddressgenerator.com.\n
+You can generate fake or real random address from fakeaddressgenerator.com. 
 With this module, you can access informations programically.
 
 # Disclaimer
