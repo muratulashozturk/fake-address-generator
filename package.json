@@ -1,0 +1,21 @@
+{
+  "name": "fake-address-generator",
+  "version": "1.0.0",
+  "description": "Unofficial API wrapper for fakeaddressgenerator.com",
+  "main": "index.js",
+  "scripts": {
+    "generate-example": "node tests/generate/test.js"
+  },
+  "keywords": [
+    "fake address generator",
+    "random address",
+    "fakeaddressgenerator.com"
+  ],
+  "author": "muratulashozturk",
+  "license": "UNLICENSED",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muratulashozturk/fake-address-generator.git"
+  }
+}
