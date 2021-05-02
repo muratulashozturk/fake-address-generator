@@ -4,7 +4,7 @@
   "description": "Unofficial API wrapper for fakeaddressgenerator.com",
   "main": "index.js",
   "scripts": {
-    "generate-example": "node tests/generate/test.js"
+    "test": "node tests/generate/test.js"
   },
   "keywords": [
     "fake address generator",
@@ -13,9 +13,13 @@
   ],
   "author": "muratulashozturk",
   "license": "UNLICENSED",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/muratulashozturk/fake-address-generator.git"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.6",
+    "url": "^0.11.0"
   }
 }
