@@ -8,7 +8,7 @@ You can generate fake or real random address from fakeaddressgenerator.com. With
 You can find example code in [Tests Folder](https://github.com/muratulashozturk/fake-address-generator/blob/main/tests/)
 
 # Support The Project
-I This module is not done 100% yet because I don't have any free time. Feel free to open pull requests to support.
+This module is not done 100% yet because I don't have any free time. Feel free to open pull requests to support.
 - [x] United Kingdom
 - [ ] USA
 - [ ] Canada
