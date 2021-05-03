@@ -1,6 +1,6 @@
 # fake-address-generator
 You can generate fake or real random address from [fakeaddressgenerator.com](https://fakeaddressgenerator.com).<br/>
-With this module, you can access informations programically.
+With this module, you can access informations programmatically.
 
 # Disclaimer
 * Please only use this module for legal and educational purposes.
