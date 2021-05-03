@@ -12,9 +12,9 @@ You can find example code in [Tests Folder](https://github.com/muratulashozturk/
 
 # Support The Project
 This module is not done 100% yet because I don't have any free time. Feel free to open pull requests to support.
-- [x] United Kingdom
-- [ ] USA
-- [ ] Canada
-- [ ] Australia
-- [ ] Germany
-- [ ] Other Countries
+- ✔️ United Kingdom
+- ❌ USA
+- ❌ Canada
+- ❌ Australia
+- ❌ Germany
+- ❌ Other Countries
