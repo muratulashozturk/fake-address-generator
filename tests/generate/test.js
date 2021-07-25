@@ -12,3 +12,6 @@ async function GenerateInformation(country){
 
 
 GenerateInformation("uk"); // United Kingdom
+GenerateInformation("us"); // United States
+var params = {country:'us',sex:"Female",state:0,city:0,zip:10001}
+GenerateInformation(params); // United States
