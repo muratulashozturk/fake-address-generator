@@ -3,6 +3,7 @@ module.exports =
 {
     name:'us',
     url:'https://www.fakeaddressgenerator.com/World_Address/get_us_address1',
+    params:{ sex: 0, state: 0, city: 0, zip: 0 },
     info: [{
         basicInformation: {
             tableIndex: 2,
