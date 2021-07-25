@@ -12,3 +12,4 @@ async function GenerateInformation(country){
 
 
 GenerateInformation("uk"); // United Kingdom
+GenerateInformation("us"); // United States
