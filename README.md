@@ -8,6 +8,30 @@ With this module, you can access informations programmatically.
 # Using
 You just need to run `npm i fake-address-generator`.<br/>
 After adding, you just need to add this line to your project `const fakeAddress = require("fake-address-generator");`.<br/>
+
+```javascript
+
+const params = {
+    country:'us',
+    sex:"Female",
+    state:0,// - random value by default
+    city:0,
+    zip:10001
+  } 
+
+
+fakeAddress.Generate(params || 'us', async function(err, response) {
+    if (err) {
+      return console.log("error: " + err);
+    } else {
+      return console.log(response);
+    }
+  });
+```
+You can pass as a JSON parameter an object or an abbreviation of a country.
+The parameter structure may be unique for each country, please see the "Custom Generate" section at https://fakeaddressgenerator.com/
+as well as the default parameters are specified in the schemes (scheme/*)
+
 The return is JSON. It's easy to use. Example response:
 ```javascript
 {
@@ -56,7 +80,7 @@ The return is JSON. It's easy to use. Example response:
     carLicensePlate: 'RVN 7884 - issued in Illinois (IL) in year 2013',
     onlineStatus: 'hitting higher highs, and lower lows',
     onlineSignature: "I'm an addict",
-    'online Biography': 'Social media aficionado. Food evangelist. Devoted web scholar. Beer maven. Proud reader.',
+    onlineBiography: 'Social media aficionado. Food evangelist. Devoted web scholar. Beer maven. Proud reader.',
     interest: 'Internet Marketing,Rock and Mineral Collecting,Darts'
   },
   personalInformation2: {
