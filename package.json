@@ -9,9 +9,17 @@
   "keywords": [
     "fake address generator",
     "random address",
+    "random address generator",
+    "generate address",
+    "generate random address",
+    "fake address",
+    "address generator",
     "fakeaddressgenerator.com"
   ],
   "author": "muratulashozturk",
+  "contributors": [
+    "Viacheslav Nikitin (https://github.com/dzxt)"
+  ]
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
