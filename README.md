@@ -111,6 +111,10 @@ The return is JSON. It's easy to use. Example response:
 ```
 You can find example code in [Tests Folder](https://github.com/muratulashozturk/fake-address-generator/blob/main/tests/)
 
+# Contributors
+- [Viacheslav Ni0itin](https://github.com/dzxt)
+
+
 # Support The Project
 This module is not done 100% yet because I don't have any free time. Feel free to open pull requests to support.
 - ✔️ United Kingdom
