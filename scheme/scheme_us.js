@@ -75,7 +75,7 @@ module.exports =
                 "carLicensePlate",
                 "onlineStatus",
                 "onlineSignature",
-                "online Biography",
+                "onlineBiography",
                 "interest"
             ],
         }
