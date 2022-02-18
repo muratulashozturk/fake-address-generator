@@ -1,3 +1,5 @@
+# fakeaddressgenerator.com has been shut down. This project is not active anymore.
+
 # fake-address-generator
 You can generate fake or real random address from [fakeaddressgenerator.com](https://fakeaddressgenerator.com).<br/>
 With this module, you can access informations programmatically.
