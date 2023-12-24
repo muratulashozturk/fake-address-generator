@@ -10,7 +10,7 @@ Generate fake or real random addresses programmatically from [fakeaddressgenerat
     - Basic information (name, gender, race, birthdate, SSN)
     - Complete address details
     - Physical attributes (height, weight, hair color, blood type)
-    - Employment and financial information (occupation, salary, credit card details)
+    - Employment and financial information (occupation, salary)
     - Personal interests and online profiles
 - **Supported Countries:**
     - ✔️ United Kingdom
