@@ -48,6 +48,81 @@ try {
 }
 ```
 
+## Response Format
+```json
+{
+  "basicInformation": {
+    "fullName": "...",
+    "gender": "female",
+    "title": "Mrs.",
+    "race": "White",
+    "birthday": "7/25/1994",
+    "ssn": "..."
+  },
+  "address": {
+    "street": "... Forest Avenue",
+    "city": "New York",
+    "state": "NY",
+    "stateFull": "New York",
+    "zip": "10001",
+    "phone": "...",
+    "phoneMob": "...",
+    "country": "us"
+  },
+  "moreBasicInformation": {
+    "height": "5' 3\" (159 centimeters)",
+    "weight": "162.2 pounds (73.57 kilograms)",
+    "hairColor": "Black",
+    "bloodType": "O+",
+    "mothersMaidenName": "Minor",
+    "civilStatus": "Dating/Looking for love",
+    "educational": "Bachelor's degree",
+    "driverLicense": "..."
+  },
+  "employmentAndFinance": {
+    "employmentStatus": "Full-time work",
+    "monthlySalary": "$5,300",
+    "occupation": "Athlete and Sports Competitor",
+    "companyName": "Dreamscape Garden Care",
+    "companySize": "51-100 employees",
+    "industry": "Arts, Design, Entertainment, Sports, and Media Occupations",
+  },
+  "personalInformation": {
+    "vehicle": "2005 Ferrari Maranello",
+    "carLicensePlate": "...",
+    "onlineStatus": "No thanks, 5 Hour Energy, I'd rather have a 5 Hour Nap.",
+    "onlineSignature": "There is no fear before and no fear after. We give our best.;Rickie Lee Jones;fear",
+    "onlineBiography": "Incurable travel geek. Alcoholaholic. Twitter evangelist. Proud thinker.",
+    "interest": "Jewelry Making,Playing An Instrument"
+  },
+  "personalityStyle": {
+    "favoriteColor": "Silver",
+    "favoriteMovie": "Martin Freeman",
+    "favoriteMusic": "Blues",
+    "favoriteSong": "The Greatest(by Sia feat. Kendrick Lamar)",
+    "favoriteBook": "The Iliad/The Odyssey --by Homer",
+    "favoriteSports": "Soccer",
+    "favoriteTV": "Bloodline (2015)",
+    "favoriteSinger": "Mariah Carey",
+    "favoriteFood": "Peanut butter & jelly sandwich",
+    "personality": "Serious",
+    "personalStyle": "Average Joe/Jane"
+  },
+  "onlineProfile": {
+    "username": "...",
+    "password": "...",
+    "website": "...",
+    "secQuestion": "What is your dog's name?",
+    "secAnswer": "hawy",
+    "userAgent": "...",
+    "system": "Windows 10",
+    "guid": "...",
+    "countryCode": "1"
+  }
+}
+```
+
+
 # Support The Project
 Help expand the project's reach by adding support for more countries! Pull requests are welcome.
 
