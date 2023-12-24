@@ -1,7 +1,7 @@
 {
   "name": "fake-address-generator",
-  "version": "1.1.0",
-  "description": "Unofficial API wrapper for fakeaddressgenerator.com",
+  "version": "2.0.0",
+  "description": "Random Fake Address Generator Including Fake Personal Information, Personality Style, Online Profile, and more. Unofficial API wrapper for worldnamegenerator.com",
   "main": "index.js",
   "scripts": {
     "test": "node tests/generate/test.js"
@@ -14,12 +14,13 @@
     "generate random address",
     "fake address",
     "address generator",
+    "worldnamegenerator.com",
     "fakeaddressgenerator.com"
   ],
   "author": "muratulashozturk",
   "contributors": [
     "Viacheslav Nikitin (https://github.com/dzxt)"
-  ]
+  ],
   "license": "UNLICENSED",
   "repository": {
     "type": "git",

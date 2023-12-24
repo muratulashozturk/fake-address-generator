@@ -1,7 +1,7 @@
 const fakeAddress = require("../../index.js");
 
 async function GenerateInformation(country){
-    fakeAddress.Generate(country, async function(err, response) {
+    await fakeAddress.Generate(country, async function(err, response) {
         if (err) {
           return console.log("error: " + err);
         } else {

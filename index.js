@@ -1,70 +1,48 @@
 const axios = require("axios");
-const cheerio = require('cheerio');
-const requestBuilder = require('./request_builder')
-const uk = require('./scheme/scheme_uk');
-const us = require('./scheme/scheme_us');
+const cheerio = require("cheerio");
+const requestBuilder = require("./request_builder");
+const uk = require("./scheme/scheme_uk");
+const us = require("./scheme/scheme_us");
 var instance = axios.create();
 
-
-
-
 const parse = ($, tableIndex, scheme, offset = 0) => {
-    var result = {}
-    const table = `table.table:nth-child(${tableIndex})`
-    const element = (index) => `tr:nth-child(${index})`
-    if (Array.isArray(scheme)) {
-        result = scheme.reduce((prevName, currName, index) => {
-            const selector = `${table} > tbody:nth-child(1) > ${element(index + 1 + offset)} > td:nth-child(2) > b:nth-child(1)`
-            prevName[currName] = $(selector).text().trim()
-            return prevName
-        }, {})
-    }
-    return result
-}
+    if (!Array.isArray(scheme)) return {};
 
+    const tableSelector = `table.table:nth-child(${tableIndex}) > tbody:nth-child(1)`;
+    return scheme.reduce((result, fieldName, index) => {
+        const selector = `${tableSelector} > tr:nth-child(${index + 1 + offset}) > td:nth-child(2) > b:nth-child(1)`;
+        result[fieldName] = $(selector).text().trim();
+        return result;
+    }, {});
+};
 
-exports.Generate = (params, rt) => {
+exports.Generate = async (params, rt) => {
+    let country = typeof params === "string" ? params : params.country;
+    let scheme = country === "uk" ? uk : us;
+    let tableIndexOffset = typeof params === "object" ? 1 : 0;
+    params = params && typeof params === "object" ? params : scheme.params;
 
-    var scheme = {}
-    var country = '';
-    var tableIndexOffset = 0;
-    if(typeof params ==='string'){
-        country = params
-        params = undefined
-    }else{
-        country = params.country
-        delete params.country
-        tableIndexOffset=1
-    }
-   
-    if(country==='uk'){
-        scheme=uk
-    }else{
-        scheme=us
-    }
+    console.debug("start with scheme:", scheme.name, { params });
 
-    if(params ===undefined){
-        params = scheme.params
-    }
+    try {
+        let response = await axios(requestBuilder(scheme.url, params));
 
-    console.log('start with scheme:', scheme.name,{params})
-    let request = requestBuilder(scheme.url,params)
-    instance(request).then(function (response) {
+        if (response.status !== 200) {
+            throw new Error('Failed to fetch data');
+        }
+
         var $ = cheerio.load(response.data);
         const rJson = scheme.info.reduce((json, table) => {
-            const [name] = Object.keys(table)
-            var tableIndex = table[name].tableIndex;
-            const fields = table[name].fields;
-            var offset = table[name].offset || 0;
-            if(request.data && tableIndex > 2 ){
-                tableIndex+=tableIndexOffset
-            }
-            json[name] = parse($, tableIndex, fields, offset)
-            return json
-        }, {})
+            const [name] = Object.keys(table);
+            let tableIndex = table[name].tableIndex + (response.data && table[name].tableIndex > 2 ? tableIndexOffset : 0);
+            json[name] = parse($, tableIndex, table[name].fields, table[name].offset || 0);
+            return json;
+        }, {});
+
+        rJson.address = rJson.address || {};
         rJson.address.country = country;
         rt(null, rJson);
-    }).catch(function (e) {
+    } catch (e) {
         rt(e, null);
-    });
-}
+    }
+};
